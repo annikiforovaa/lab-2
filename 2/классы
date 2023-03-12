@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <map>
+#include <vector>
+
+int main() {
+    std::map<int, std::vector<std::string>> students;
+
+    int class_number;
+    std::string student_name;
+    while (std::cin >> class_number >> student_name) {
+        students[class_number].push_back(student_name);
+    }
+
+    for (const auto& [class_number, student_names] : students) {
+        for (const auto& student_name : student_names) {
+            std::cout << class_number << " " << student_name << std::endl;
+        }
+    }
+
+    return 0;
+}
