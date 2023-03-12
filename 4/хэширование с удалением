@@ -1,0 +1,24 @@
+#include <iostream>
+#include <set>
+#include <string>
+
+using namespace std;
+
+int main() {
+    set<string> s;
+    string op, str;
+    while (cin >> op >> str) {
+        if (op == "+") {
+            s.insert(str);
+        } else if (op == "-") {
+            s.erase(str);
+        } else if (op == "?") {
+            if (s.count(str)) {
+                cout << "YES\n";
+            } else {
+                cout << "NO\n";
+            }
+        }
+    }
+    return 0;
+}
