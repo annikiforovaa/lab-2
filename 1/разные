@@ -1,0 +1,18 @@
+#include<iostream>
+#include<set>
+
+int main()
+{
+  int N;
+  std::cin >> N;
+
+  std::set<int> numbers; 
+  for (int i = 0; i < N; ++i) {
+    int number;
+    std::cin >> number;
+    numbers.insert(number);
+  }
+  
+  std::cout << numbers.size() << std::endl; 
+  return 0;
+}
